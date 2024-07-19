@@ -63,17 +63,11 @@ We used TickData (1981-2019), Datascope Tick History (1996-2024), Pi Trading (19
 
 ### Licensing
 
-The content of this repository is available under the usual conditions applying to replication files of academic articles. In particular, we follow the recommendations of the AEA https://www.aeaweb.org/journals/data/faq#license:
+The content of this repository is available under the usual conditions applying to the replication files of academic articles (see e.g. the AEA guidelines under https://www.aeaweb.org/journals/data/faq#license):
 
-#### Data
+- The source data and final dataset are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). For more details, see the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
-The source data and final dataset are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See the `DATA_LICENSE` file for more details.
-
-#### Code
-
-The code in this repository is licensed under the Modified BSD License. See the `LICENSE` file for more details.
-
-### Citation
+- The code in this repository is licensed under the BSD 3-Clause License. For more details, see the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
 
 If you use this work, please cite the following paper: Jarocinski, M. and Karadi, P. (2020) Deconstructing  Monetary Policy Surprises - The Role of Information Shocks, AEJ:Macro, DOI: http://doi.org/10.1257/mac.20180090
 
