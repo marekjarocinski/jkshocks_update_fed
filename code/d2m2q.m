@@ -1,20 +1,26 @@
-function [table_m, table_q] = table_d2m2q(table_d)
-% PURPOSE: Aggregate data at (intra-)daily frequency 
+function [table_m, table_q] = d2m2q(table_d)
+% PURPOSE: Aggregate data indexed by datetime 
 %          to monthly and quarterly by adding up.
 % INPUTS:
-% table_d - table with (intra-)daily data where the first column is datetime
+% table_d - timetable or table where the first column is datetime
 % OUTPUTS:
 % table_m - table with monthly data where the first two columns are
 %           year, month and the remaining columns contain the variables
-%           from table_d for this month added up, or 0 if no day from this
-%           month is present in table_d
+%           from table_d for this month added up, or 
+%           0 if no datetime from this month is present in table_d
 % table_q - table with quarterly data where the first two columns are
 %           year, quarter
-%
 
-datecol = table_d.(1);
-data_d = table_d{:,2:end};
-varnames = table_d.Properties.VariableNames(2:end);
+if isa(table_d, 'table')
+    datecol = table_d.(1);
+elseif isa(table_d, 'timetable')
+    datecol = table_d.Properties.RowTimes;
+else
+    error('Please provide a table or a timetable')
+end
+varnames = table_d.Properties.VariableNames(vartype("numeric"));
+data_d = table_d{:,varnames};
+
 nvar = size(data_d, 2);
 years = year(datecol(1)):year(datecol(end));
 

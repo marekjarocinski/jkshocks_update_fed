@@ -40,6 +40,6 @@ filename_t = "shocks_fed_jk_t.csv";
 writetable(tab, pathout + filename_t);
 
 % Aggregate to monthly
-mtab = table_d2m2q(tab);
+mtab = d2m2q(tab);
 mtab.Properties.VariableNames(3:4) = mtab.Properties.VariableNames(3:4) + "_hf";
 writetable(mtab, pathout + strrep(filename_t, "_t.csv", "_m.csv"));
