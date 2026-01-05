@@ -44,15 +44,15 @@ From 1997 onwards we take the dates and times from Bloomberg. Before 1997 we tak
 
 ##### High-frequency financial data sources:
 
-We used TickData (1981-2019), Datascope Tick History (1996-2024), Pi Trading (1983-2024), with variables and samples determined by data availability and our licence constraints.
+We used TickData (1981-2019), LSEG Tick History (1996-), Pi Trading (1983-2024), with variables and samples determined by data availability and our licence constraints.
 
 ##### High-frequency financial variables:
-- FF1,FF2,FF3,FF4 - Fed Funds futures - Sources: Datascope Tick History from 1996 onwards; before 1996 we take these data from the Gurkaynak, Sack and Swanson (2005) dataset.
+- FF1,FF2,FF3,FF4 - Fed Funds futures - Sources: LSEG Tick History from 1996 onwards; before 1996 we take these data from the Gurkaynak, Sack and Swanson (2005) dataset.
 - MP1 - obtained from FF1 and FF2 as in Gurkaynak, Sack and Swanson (2005)
-- ED1,ED2,ED3,ED4 - Eurodollar futures - Sources: TickData (until 2019), Datascope Tick History (2019-2022); from January 2023 onwards we use SOFR futures from Datascope Tick History
-- TFUT02,TFUT05,TFUT10,TFUT30 - Treasury futures (2,5,10,30 years) - Sources: TickData (until 2019), Datascope Tick History (2019-2024)
+- ED1,ED2,ED3,ED4 - Eurodollar futures - Sources: TickData (until 2019), LSEG Tick History (2019-2022); from January 2022 onwards we use SOFR futures from LSEG Tick History ([Acosta et al. 2024](https://doi.org/10.1016/j.econlet.2024.111873))
+- TFUT02,TFUT05,TFUT10,TFUT30 - Treasury futures (2,5,10,30 years) - Sources: TickData (1988-2019), LSEG Tick History (2019-)
 - SP500 - S&P 500 stock index - pitrading.com
-- SP500FUT - S&P 500 futures - Sources: TickData (until 2008), from 2008 onwards we use E-mini S&P 500 futures from Datascope Tick History
+- SP500FUT - S&P 500 futures - Sources: TickData (until 2008), from 2008 onwards we use E-mini S&P 500 futures from LSEG Tick History
 
 ##### Computation of the surprises:
 - We aggregate high-frequency data to one-minute frequency.
