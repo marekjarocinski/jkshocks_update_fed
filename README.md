@@ -16,8 +16,8 @@
 ---
 
 #### Definitions of the variables in `shocks_fed_jk_t.csv` and `shocks_fed_jk_m.csv`:
-- pc1 - surprise in the "policy indicator", ie the 1st principal component of the surprises in interest rate derivatives with maturities from 1 month to 1 year (MP1, FF4, ED2, ED3, ED4), rescaled by the standard deviation of the ED4 surprise
-- sp500 - surprise in the S&P500
+- pc1 - policy surprise factor: first principal component of surprises in interest rate derivatives with horizons from 1 month to 1 year (MP1, FF4, ED2, ED3, ED4), scaled to have the same standard deviation as the ED4 surprise (which is in % p.a.)
+- sp500 - surprise in the S&P500 (100 x log change)
 - MP_pm,CBI_pm - Monetary Policy and Central Bank Information shocks obtained with simple ("Poor Man's") sign restrictions.
 - MP_median,CBI_median - Monetary Policy and Central Bank Information shocks obtained with the median rotation that implements the sign restrictions.
 
